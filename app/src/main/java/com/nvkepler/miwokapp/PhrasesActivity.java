@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * Created by neelv on 21/3/18.
  */
 
-public class PhrasesActivity extends MainActivity {
+public class PhrasesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class PhrasesActivity extends MainActivity {
 
         // Create an {@link WordAdapter}, whose data source is a list of {@link Word}s. The
         // adapter knows how to create list items for each item in the list.
-        WordAdapter adapter = new WordAdapter(this, words);
+        WordAdapter adapter = new WordAdapter(this, words, R.color.category_phrases);
 
         // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
         // There should be a {@link ListView} with the view ID called list, which is declared in the
@@ -44,3 +44,4 @@ public class PhrasesActivity extends MainActivity {
         listView.setAdapter(adapter);
     }
 }
+
